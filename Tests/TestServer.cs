@@ -31,6 +31,7 @@ namespace InterviewService.Tests
                         .ConfigureAppConfiguration((builderContext, config) =>
                         {
                             config.AddJsonFile("appsettings.json", false);
+                            config.AddEnvironmentVariables();
                         })
                         .Build()
                         .RunAsync();
