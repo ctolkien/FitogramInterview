@@ -1,0 +1,10 @@
+**/.vs
+**/.vscode
+**/bin
+**/obj
+**/out
+Source/appsettings.json
+Dockerfile
+.travis.yml
+.gitignore
+*.md

@@ -1,0 +1,16 @@
+bin
+obj
+.vs
+
+*.csproj.user
+
+healthchecksdb
+
+.vscode
+
+.DS_Store
+
+.idea
+
+zip
+zip.zip
