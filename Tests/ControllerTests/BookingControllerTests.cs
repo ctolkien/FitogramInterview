@@ -75,5 +75,25 @@ namespace Tests.ControllerTests
             bookingDto.Id.ShouldNotBe(Guid.Empty);
             bookingDto.Notes.ShouldNotBeNullOrEmpty();
         }
+
+        [Fact]
+        public void GetBooking_ById_FailsIfNotAuthorized()
+        {
+            TestEnvironment testEnvironment = new TestEnvironment();
+
+            Provider provider = testEnvironment.AddProvider();
+            Customer customer = testEnvironment.AddCustomer(provider: provider);
+            Event evnt = testEnvironment.AddEvent(provider: provider);
+
+            Booking booking = testEnvironment.AddBooking(evnt: evnt, customer: customer);
+
+            ActionResult<BookingDto> actionResult = testEnvironment
+                .GetBookingsController()
+                .GetBooking(id: booking.Id);
+
+            actionResult.Value.ShouldBeNull();
+            actionResult.Result.ShouldNotBeNull();
+            actionResult.Result.ShouldBeOfType(typeof(UnauthorizedResult));
+        }
     }
 }

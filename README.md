@@ -9,7 +9,7 @@ If you run in trouble getting the project to run, just create the Pull Requests 
 We expect this to take around an hour to complete. Please don't spend 2 hours or more.
 
 - [x] ISSUE-1: It seems the tests are failing. Please find the failing tests and fix them. 
-- [ ] If necessary improve the test to have full coverage.
+- [x] If necessary improve the test to have full coverage.
 
 - [x] ISSUE-2: The product team wishes to have a field for notes on the booking (so that the customer can add some notes when making a booking). Please add the field `Notes` (string) to the model and make sure it can be added and read via the existing bookings api.
 
@@ -31,7 +31,9 @@ docker-compose up test
 
 I've not implemented running EF migrations on startup. Please run `dotnet ef database update` to apply the migration to add `Notes` to the `Booking`
 
-These are all minor but they might be fun to talk about during the review
+I've not gone further with adding tests. I 
+
+These are all minor but they might be fun to talk about during the review:
 
 - The Roslyn rules are a bit restrictive and I wonder if that reflects the production code base and, if so, has the team been happy with them? For example, if you add an EF migration via the dotnet tool then you cannot immediately remove the migration via the same tool if you're not happy with the name because it attempts to build the project which will fail because of a rule violation on the newly added files.
 

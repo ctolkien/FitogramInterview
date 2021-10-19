@@ -44,10 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientTests\Extensions" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Fitogram.EntityFrameworkCore.DbContext">
       <HintPath>..\packages\Fitogram.EntityFrameworkCore.DbContext.dll</HintPath>
     </Reference>
