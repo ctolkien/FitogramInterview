@@ -11,7 +11,7 @@ We expect this to take around an hour to complete. Please don't spend 2 hours or
 - [x] ISSUE-1: It seems the tests are failing. Please find the failing tests and fix them. 
 - [ ] If necessary improve the test to have full coverage.
 
-- [ ] ISSUE-2: The product team wishes to have a field for notes on the booking (so that the customer can add some notes when making a booking). Please add the field `Notes` (string) to the model and make sure it can be added and read via the existing bookings api.
+- [x] ISSUE-2: The product team wishes to have a field for notes on the booking (so that the customer can add some notes when making a booking). Please add the field `Notes` (string) to the model and make sure it can be added and read via the existing bookings api.
 
 ## Development
 
