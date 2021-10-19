@@ -31,7 +31,7 @@ docker-compose up test
 
 I've not implemented running EF migrations on startup. Please run `dotnet ef database update` to apply the migration to add `Notes` to the `Booking`
 
-I've not gone further with adding tests. I 
+I've not gone further with adding tests outside of the task to solve issue 2. A quick one to show some authorization validation, but that's it.
 
 These are all minor but they might be fun to talk about during the review:
 
