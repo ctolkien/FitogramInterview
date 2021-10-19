@@ -18,6 +18,7 @@ namespace InterviewService.Tests.MapperTests
                 ProviderId = Guid.NewGuid(),
                 CustomerId = Guid.NewGuid(),
                 EventId = Guid.NewGuid(),
+                Notes = "Will be meeting with Ulf for weight-training",
                 TimeStamp = DateTimeOffset.Now
             };
             var dto = booking.ToDto();
@@ -29,7 +30,7 @@ namespace InterviewService.Tests.MapperTests
                 () => dto.ProviderId.ShouldBe(booking.ProviderId),
                 () => dto.EventId.ShouldBe(booking.EventId),
                 () => dto.CustomerId.ShouldBe(booking.CustomerId),
-                () => dto.CustomerId.ShouldBe(booking.CustomerId),
+                () => dto.Notes.ShouldBe(booking.Notes),
                 () => dto.Deleted.ShouldBe(booking.Deleted),
                 () => dto.TimeStamp.ShouldBe(booking.TimeStamp)
             );

@@ -51,11 +51,14 @@ namespace InterviewService.Controllers
                 ProviderId = customer.ProviderId,
                 Customer = customer,
                 Event = evnt,
+                Notes = body.Notes,
                 CreatedBy = userId,
                 ModifiedBy = userId
             };
 
             this.Logger.LogInformation($"Creating an {nameof(Booking)} with ID {{bookingId}}, triggered by {{userId}}.", booking.Id, userId);
+
+            this.Context.Bookings.Add(booking);
 
             this.Context.SaveChanges(skipBeforeSaveChanges: false, skipAfterSaveChanges: true);
 

@@ -16,6 +16,7 @@ namespace InterviewService.Models
         public virtual Event Event { get; set; }
         public Guid CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
+        public string Notes { get; set; }
 
         public void BeforeSaveChanges(EntityUpdate update)
         {

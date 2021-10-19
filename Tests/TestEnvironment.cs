@@ -165,7 +165,7 @@ namespace Tests
         #endregion AddEvent
 
         #region AddBooking
-        public Booking AddBooking(Event evnt, Customer customer)
+        public Booking AddBooking(Event evnt, Customer customer, string bookingNotes = null)
         {
             using (InterviewService.DbContext context = this.CreateContext())
             {
@@ -180,6 +180,7 @@ namespace Tests
                     ProviderId = evnt.Provider.Id,
                     EventId = evnt.Id,
                     CustomerId = customer.Id,
+                    Notes = bookingNotes
                 });
 
                 context.SaveChanges();

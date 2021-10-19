@@ -25,6 +25,7 @@ namespace InterviewService.Mappers
                 ProviderId = x.ProviderId,
                 EventId = x.EventId,
                 CustomerId = x.CustomerId,
+                Notes = x.Notes,
                 Deleted = x.Deleted,
                 TimeStamp = x.TimeStamp,
             })

@@ -10,5 +10,6 @@ namespace InterviewService.Dto.Output
         public Guid ProviderId { get; set; }
         public DateTimeOffset? Deleted { get; set; }
         public DateTimeOffset TimeStamp { get; set; }
+        public string Notes { get; set; }
     }
 }
