@@ -1,8 +1,12 @@
 # BUILD IMAGE
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /build
-COPY . .
+COPY InterviewService.sln .
+COPY Client/InterviewService.Client.csproj ./Client/
+COPY Source/InterviewService.csproj ./Source/
+COPY Tests/InterviewService.Tests.csproj ./Tests/
 RUN dotnet restore
+COPY . .
 RUN dotnet build
 RUN dotnet publish ./Source/InterviewService.csproj -c Release -o Release
 
